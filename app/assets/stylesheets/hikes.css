@@ -1,0 +1,17 @@
+.list_image {
+	border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+.list_description dl dt {
+	font-size: 1.5em;
+	font-style: bold;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.list_description dl dd {
+	max-width: 100%;
+}

@@ -1,4 +1,56 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+ <meta charset = "UTF-8">
+ <title>externalStyle.html</title>
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "hikes.css" />
+ </head>
+ <body>
+  <p id="notice"><%= notice %></p>
+
+  <div id="hike_list">
+    <h1>Listing hikes</h1>
+
+    <table>
+    <% @hikes.each do |hike| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+        <td>
+          <%= image_tag(hike.image, :class => 'list_image') %>
+        </td>
+
+        <td class= "list_description">
+          <dl>
+            <dt><%= hike.title %></dt>
+            <dd><%= truncate(strip_tags(hike.description), :length => 200) %></dd>
+          </dl>
+        </td>
+
+        <td class="list_link">
+          <a href="<%= hike.link %>" target="_blank"><%= hike.link %></a>
+        </td>
+
+        <td class="list_actions">
+          <%= link_to 'Show', hike %><br/>
+          <%= link_to 'Edit', edit_hike_path(hike) %><br/>
+          <%= link_to 'Destroy', hike,
+                      :confirm => 'Are you sure?',
+                      :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+
+  <br />
+
+  <%= link_to 'New Hike', new_hike_path %>
+</body>
+</html>
+
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Listing Hikes</h1>
 
@@ -39,3 +91,4 @@
 <br>
 
 <%= link_to 'New Hike', new_hike_path %>
+ -->
