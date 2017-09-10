@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  distance: 1
+  difficulty: MyString
+  region: MyString
+  description: MyText
+  image: MyString
+  link: MyString
+  completed: false
+
+two:
+  title: MyString
+  distance: 1
+  difficulty: MyString
+  region: MyString
+  description: MyText
+  image: MyString
+  link: MyString
+  completed: false
