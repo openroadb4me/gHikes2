@@ -11,7 +11,7 @@
   <p id="notice"><%= notice %></p>
 
   <div id="hike_list">
-    <h1>Listing hikes</h1>
+    <h1>Hikes in Georgia</h1>
 
     <table>
     <% @hikes.each do |hike| %>
@@ -23,7 +23,7 @@
 
         <td class= "list_description">
           <dl>
-            <dt><%= hike.title %></dt>
+            <dt><a href="/hikes/<%= hike.id %>"><%= hike.title %></a></dt>
             <dd><%= truncate(strip_tags(hike.description), :length => 200) %></dd>
           </dl>
         </td>
