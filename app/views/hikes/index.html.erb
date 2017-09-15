@@ -15,7 +15,8 @@
 
     <table>
     <% @hikes.each do |hike| %>
-      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      <!-- <tr class="<%= cycle('list_line_odd', 'list_line_even') %>"> -->
+      <tr>
 
         <td>
           <%= image_tag(hike.image, :class => 'list_image') %>
