@@ -28,7 +28,7 @@ class HikesController < ApplicationController
 
     respond_to do |format|
       if @hike.save
-        format.html { redirect_to @hike, notice: 'Hike was successfully created.' }
+        format.html { redirect_to @hike, notice: 'Hike was successfully created. Happy trails!' }
         format.json { render :show, status: :created, location: @hike }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class HikesController < ApplicationController
   def update
     respond_to do |format|
       if @hike.update(hike_params)
-        format.html { redirect_to @hike, notice: 'Hike was successfully updated.' }
+        format.html { redirect_to @hike, notice: 'Hike was successfully updated. Get back out there!' }
         format.json { render :show, status: :ok, location: @hike }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class HikesController < ApplicationController
   def destroy
     @hike.destroy
     respond_to do |format|
-      format.html { redirect_to hikes_url, notice: 'Hike was successfully destroyed.' }
+      format.html { redirect_to hikes_url, notice: 'Hike was successfully destroyed. Mother Nature is sad.' }
       format.json { head :no_content }
     end
   end

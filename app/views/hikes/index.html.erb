@@ -9,11 +9,14 @@
  </head>
  <body>
   <p id="notice"><%= notice %></p>
-
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><%= link_to 'View hike', hikes_path %></li>
+    <li><%= link_to 'New hike', new_hike_path %></li>
+  </ul>
   <div id="hike_list">
     <h1>Hikes in Georgia</h1>
 
-    <table>
+    <table class="table-responsive">
     <% @hikes.each do |hike| %>
       <!-- <tr class="<%= cycle('list_line_odd', 'list_line_even') %>"> -->
       <tr>
@@ -34,11 +37,12 @@
         </td>
 
         <td class="list_actions">
-          <%= link_to 'Show', hike %><br/>
-          <%= link_to 'Edit', edit_hike_path(hike) %><br/>
+          <%= link_to 'Show', hike, class: 'btn btn-primary btn-xs' %><br/>
+          <%= link_to 'Edit', edit_hike_path(hike), class: 'btn btn-info btn-xs' %><br/>
           <%= link_to 'Destroy', hike,
                       :confirm => 'Are you sure?',
-                      :method => :delete %>
+                      :method => :delete,
+                      class: 'btn btn-danger btn-xs' %>
         </td>
       </tr>
     <% end %>
@@ -47,7 +51,9 @@
 
   <br />
 
-  <%= link_to 'New Hike', new_hike_path %>
+  <%= link_to new_hike_path, class: 'btn btn-success' do %>
+    <i class="glyphicon glyphicon-plus"></i> New hike
+  <% end %>
 </body>
 </html>
 

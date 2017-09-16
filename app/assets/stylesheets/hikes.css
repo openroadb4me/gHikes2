@@ -20,3 +20,14 @@ body table {
 .list_description dl dd {
 	max-width: 100%;
 }
+
+.table-responsive tr td {
+	padding: 5px;
+	margin: 5px;
+}
+
+.table-responsive {
+	border-style: groove;
+	border-color: inherit;
+	border-width: medium;
+}
