@@ -3,8 +3,12 @@ body .table-responsive {
 	padding: 5px;
 }
 
-body .table tr td {
+/*body .table tr td {
 	float: right;
+}*/
+
+body table tr .submit {
+	float: auto;
 }
 
 .list_image {
