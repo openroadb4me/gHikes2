@@ -1,3 +1,5 @@
 class User < ActiveRecord::Base
-	has_many :hikes, dependent: :destroy
+
+  has_secure_password
+  
 end

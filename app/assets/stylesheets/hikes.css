@@ -1,6 +1,10 @@
-body table {
+body .table-responsive {
 	background-color: #F5ECCE;
 	padding: 5px;
+}
+
+body .table tr td {
+	float: right;
 }
 
 .list_image {

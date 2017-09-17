@@ -1,4 +1,6 @@
 class HikesController < ApplicationController
+
+  before_filter :authorize
   before_action :set_hike, only: [:show, :edit, :update, :destroy]
 
   # GET /hikes
