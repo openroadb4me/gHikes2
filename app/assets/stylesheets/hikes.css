@@ -7,7 +7,7 @@ body table {
 	border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
-    width: 150px;
+    width: 100%;
 }
 
 .list_description dl dt {
@@ -18,8 +18,21 @@ body table {
 }
 
 .list_description dl dd {
+	max-width: 95%;
+}
+
+.list_actions {
+	float: right;
+}
+
+.list_link {
+	float: right;
 	max-width: 100%;
 }
+
+/*.link_title {
+	max-width: 100%;
+}*/
 
 .table-responsive tr td {
 	padding: 5px;

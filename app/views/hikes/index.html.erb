@@ -37,7 +37,6 @@
     <% @hikes.each do |hike| %>
       <!-- <tr class="<%= cycle('list_line_odd', 'list_line_even') %>"> -->
       <tr>
-
         <td>
           <%= image_tag(hike.image, :class => 'list_image') %>
         </td>
@@ -45,17 +44,21 @@
         <td class= "list_description">
           <dl>
             <dt><a href="/hikes/<%= hike.id %>"><%= hike.title %></a></dt>
-            <dd><%= truncate(strip_tags(hike.description), :length => 200) %></dd>
+            <dd><%= truncate(strip_tags(hike.description), :length => 400) %></dd>
           </dl>
         </td>
-
+      </tr>
+      <tr>
+        <td class= "link_title" align="right"></td>
         <td class="list_link">
           <a href="<%= hike.link %>" target="_blank"><%= hike.link %></a>
         </td>
-
+      </tr>
+      <tr>
+        <td></td>
         <td class="list_actions">
-          <%= link_to 'Show', hike, class: 'btn btn-primary btn-xs' %><br/>
-          <%= link_to 'Edit', edit_hike_path(hike), class: 'btn btn-info btn-xs' %><br/>
+          <%= link_to 'Show', hike, class: 'btn btn-primary btn-xs' %>
+          <%= link_to 'Edit', edit_hike_path(hike), class: 'btn btn-info btn-xs' %>
           <%= link_to 'Destroy', hike,
                       :confirm => 'Are you sure?',
                       :method => :delete,
