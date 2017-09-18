@@ -35,6 +35,7 @@ body .table-responsive {
 
 .list_link {
 	float: right;
+	color: blue;
 	max-width: 100%;
 }
 

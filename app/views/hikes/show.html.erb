@@ -27,7 +27,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @hike.image %>
+  <%= image_tag @hike.image_url.to_s, alt: "Image", class: "img-responsive" %>
 </p>
 
 <p>
