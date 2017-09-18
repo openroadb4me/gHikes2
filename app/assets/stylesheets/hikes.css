@@ -1,3 +1,8 @@
+body {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
 body .table-responsive {
 	background-color: #F5ECCE;
 	padding: 5px;
@@ -52,4 +57,10 @@ body .table-responsive {
 	border-style: groove;
 	border-color: inherit;
 	border-width: medium;
+}
+
+.btn-success {
+	float: right;
+	padding-right: 10px;
+	margin-right: 10px;
 }
