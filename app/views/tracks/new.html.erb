@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+  <head>
+    <meta charset = "UTF-8">
+
+    <title>externalStyle.html</title>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "hikes.css" />
+  </head>
+ <p id="notice"><%= notice %></p>
+<body>
+  <ul class="nav nav-tabs" role="tablist">
+    <li><%= link_to 'View track', tracks_path %></li>
+    <li class="active"><%= link_to 'New track', new_track_path %></li>
+  </ul>
+<h1>New Track</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', tracks_path %>
