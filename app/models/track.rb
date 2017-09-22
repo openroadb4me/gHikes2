@@ -32,7 +32,7 @@ class Track < ActiveRecord::Base
     if node.node_name.eql? 'trkseg'
       tmp_segment = Tracksegment.new
       node.elements.each do |node|
-        parse_points(node,tmp_segment)
+        parse_points(node, tmp_segment)
       end
       self.tracksegments << tmp_segment
     end
